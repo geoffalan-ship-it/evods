@@ -6,7 +6,7 @@
   <title>Connect with EVODS</title>
   <style>
     :root{--green:#4BA114;--canvas:#101010;--panel:#151515;--field:#292929;--line:#202020;--label:#b5b5b7;--white:#f6f6f6}*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--white);font-family:Arial,sans-serif}.nav{height:72px;background:#0b0b0b;padding:0 6vw;display:flex;align-items:center;border-bottom:1px solid #1d1d1d}.nav img{width:126px;filter:brightness(0) invert(1)}main{max-width:1660px;margin:auto;padding:72px 6vw 112px}h1{font-size:clamp(2.7rem,5vw,5.2rem);letter-spacing:-.065em;line-height:.95;font-weight:500;margin:0 0 52px}.form{position:relative;background:var(--panel);padding:62px 64px;box-shadow:0 18px 45px rgba(0,0,0,.22);border:1px solid #202020}.grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 32px}.field{display:flex;flex-direction:column;gap:15px}.field.full{grid-column:1/-1}label{font-size:17px;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:var(--label)}input,textarea{width:100%;border:1px solid transparent;border-radius:999px;background:var(--field);color:var(--white);padding:0 34px;font:500 18px Arial;outline:none;transition:border-color .2s,background .2s}input{height:96px}textarea{height:216px;border-radius:34px;padding:29px 34px;line-height:1.5;resize:vertical}input::placeholder,textarea::placeholder{color:#858587}input:focus,textarea:focus{border-color:var(--green);background:#303030}.submit{position:absolute;right:-28px;bottom:148px;width:96px;height:96px;border:0;border-radius:50%;background:var(--green);color:#fff;font-size:34px;line-height:1;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s,background .2s}.submit:hover{background:#57b51a;transform:translateY(-2px)}.success{max-width:900px;padding:30px;background:#20301a;border:1px solid #4BA114;color:#fff;font-size:18px}@media(max-width:760px){main{padding:52px 5vw 76px}h1{margin-bottom:36px}.form{padding:38px 28px}.grid{grid-template-columns:1fr;gap:26px}.field.full{grid-column:auto}label{font-size:13px}input{height:70px;font-size:17px}textarea{height:180px}.submit{position:static;width:100%;height:64px;border-radius:999px;font-size:16px;font-weight:bold;letter-spacing:.08em;margin-top:32px}.submit::after{content:'Connect with EVODS';}.submit span{display:none}}</style>
-  <link rel="stylesheet" href="/alternate-site.css?v=6">
+  <link rel="stylesheet" href="/alternate-site.css?v=7">
 </head>
 <body>
   <nav class="nav"><a href="index.html"><img src="/assets/logo.svg" alt="EVODS"></a></nav>
@@ -24,6 +24,6 @@
     <div class="success" hidden>Thank you. Your message has been received. Our team will be in touch.</div>
   </main>
   <script>document.querySelector('form').addEventListener('submit',function(event){event.preventDefault();this.hidden=true;document.querySelector('.success').hidden=false;});</script>
-  <script src="/site-nav.js?v=4"></script>
+  <script src="/site-nav.js?v=5"></script>
 </body>
 </html>

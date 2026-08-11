@@ -17,3 +17,13 @@ footer{background:#232323!important;border-top:1px solid rgba(255,255,255,.15)!i
 .hero h1.home-headline{max-width:700px!important;font-size:clamp(2rem,2.7vw,3.4rem)!important;line-height:.98!important;letter-spacing:-.065em!important}
 .hero h1.home-headline em{display:inline!important;font:inherit!important;letter-spacing:inherit!important;line-height:inherit!important;color:var(--lime)!important;white-space:nowrap!important}
 @media(max-width:850px){.nav{left:12px!important;right:12px!important;height:auto!important;min-height:50px!important;padding:8px 0!important}.nav-logo{left:0!important}.nav-links{left:auto!important;right:0!important;transform:translateY(-50%)!important;gap:0!important;padding:0 8px!important}.hero{padding-top:130px!important}.nav-item>a{padding:8px 9px!important;font-size:11px!important}}
+/* Phone layout safety net for every service page. Individual desktop grids stack cleanly at this breakpoint. */
+@media(max-width:760px){
+  html,body{max-width:100%!important;overflow-x:hidden!important}.site,main,section{min-width:0!important}.site{overflow:visible!important}
+  .intro,.outcomes,.pulse,.choice,.caas-cta,.features-top,.hero-inner,.promo-inner,.exp-inner,.content-grid,.map-header{grid-template-columns:1fr!important;display:grid!important;gap:24px!important}
+  .services-head,.cta,.map-header{align-items:flex-start!important;flex-direction:column!important}.map-header{display:flex!important;padding:20px 18px 0!important}.legend{padding-top:0!important;flex-wrap:wrap!important}
+  .service-grid,.offer-grid,.benefits,.outcome-grid,.feature-grid,.pulse-items,.pulse-points,.pulse-list,.choice-list,.how-grid,.steps-row,.features-grid,.location-list,.footer-grid{grid-template-columns:1fr!important}
+  .service,.service:nth-child(even),.offer,.offer:not(:first-child),.benefit,.benefit:not(:first-child),.feature,.feature:not(:first-child),.pulse-item,.pulse-item:not(:first-child){min-height:0!important;padding:24px 0!important;border-right:0!important}
+  .booking-row{grid-template-columns:1fr!important}.posts{grid-template-columns:1fr!important}.data-table{display:block!important;max-width:100%!important;overflow-x:auto!important}
+  .form{padding:30px 20px!important}.grid{grid-template-columns:1fr!important}.field.full{grid-column:auto!important}
+}

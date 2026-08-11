@@ -43,7 +43,21 @@
     @media(max-width:850px){main > .hero{min-height:680px!important}}
     @media(max-width:510px){main > .hero h1,main > .hero h1 *,main > .hero h1.home-headline{font-size:3rem!important;line-height:1!important}main > .hero p,main > .hero .hero-sub{font-size:1.08rem!important;line-height:1.5!important}main > .hero .button,main > .hero .cta{margin-top:30px!important;min-height:54px!important}}
     @media(max-width:760px){.site-footer-grid{grid-template-columns:1fr 1fr!important;gap:30px 22px!important}.site-footer-brand{grid-column:1/-1!important}}
-    @media(max-width:900px){.nav{height:auto!important;align-items:flex-start!important;justify-content:flex-start!important;flex-direction:column!important;padding:10px 12px!important}.nav-links{height:auto!important;min-height:44px!important;width:100%!important;justify-content:flex-start!important;overflow-x:auto!important;overflow-y:visible!important;flex-wrap:nowrap!important}.nav-item{height:42px!important}.nav-item>a{padding:0 12px!important}.dropdown{position:absolute!important}}
+    /* Mobile navigation: a compact, tap-friendly menu rather than a clipped scrolling bar. */
+    .nav-mobile-toggle{display:none!important}
+    @media(max-width:760px){
+      html,body{max-width:100%!important;overflow-x:hidden!important}.site{overflow:visible!important}
+      .nav{position:absolute!important;top:0!important;left:0!important;right:0!important;height:64px!important;min-height:64px!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;padding:8px 12px!important;gap:10px!important;overflow:visible!important}
+      .nav>.nav-logo{position:static!important;transform:none!important;height:40px!important;padding:0 11px!important}.nav>.nav-logo img{width:94px!important}.nav>.nav-logo .evods-logo{width:94px!important;height:auto!important}
+      .nav-mobile-toggle{display:inline-flex!important;width:42px!important;height:42px!important;align-items:center!important;justify-content:center!important;border:1px solid rgba(255,255,255,.22)!important;border-radius:999px!important;background:rgba(17,17,17,.68)!important;color:#fff!important;font-size:21px!important;line-height:1!important;cursor:pointer!important;backdrop-filter:blur(12px)!important}
+      .nav-mobile-toggle span{display:block!important;transform:translateY(-1px)!important}.nav-mobile-toggle[aria-expanded="true"] span{font-size:0!important}.nav-mobile-toggle[aria-expanded="true"] span::before{content:"×"!important;font-size:25px!important}
+      .nav-links{display:none!important;position:absolute!important;top:calc(100% + 8px)!important;left:12px!important;right:12px!important;transform:none!important;width:auto!important;height:auto!important;min-height:0!important;max-height:calc(100svh - 82px)!important;overflow-y:auto!important;padding:8px!important;border-radius:18px!important;background:rgba(18,18,18,.98)!important;border:1px solid rgba(255,255,255,.16)!important;box-shadow:0 22px 60px rgba(0,0,0,.45)!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:2px!important}
+      .nav.nav-open .nav-links{display:flex!important}.nav-item{display:block!important;width:100%!important;height:auto!important}.nav-item>a{display:flex!important;width:100%!important;height:46px!important;justify-content:space-between!important;margin:0!important;padding:0 14px!important;font-size:14px!important}.nav-item.has-dropdown>a::after{margin-left:auto!important}
+      .dropdown{display:none!important;position:static!important;opacity:1!important;pointer-events:auto!important;transform:none!important;min-width:0!important;width:100%!important;margin:2px 0 6px!important;padding:5px!important;border-radius:12px!important;background:rgba(255,255,255,.055)!important;box-shadow:none!important}.nav-item.has-dropdown::before{display:none!important}.nav-item.is-open .dropdown{display:block!important}
+      main > .hero{min-height:min(640px,100svh)!important;padding:102px 24px 46px!important;align-items:flex-end!important}.hero-copy,.hero-content{max-width:100%!important}main > .hero h1,main > .hero h1 *,main > .hero h1.home-headline{font-size:clamp(2.35rem,10.2vw,3.25rem)!important;line-height:1!important;margin-bottom:18px!important}main > .hero p,main > .hero .hero-sub{font-size:1rem!important;line-height:1.5!important;max-width:34rem!important}main > .hero .button,main > .hero .cta{min-height:54px!important;margin-top:28px!important;padding:0 20px!important;font-size:11px!important}
+      .site-footer{padding:36px 24px 24px!important}.site-footer-grid{grid-template-columns:1fr!important;gap:26px!important}.site-footer-brand{grid-column:auto!important}.site-footer-col a{font-size:15px!important;margin-bottom:10px!important}
+      img,svg,video,canvas{max-width:100%!important}
+    }
   `;
   document.head.appendChild(sharedStyle);
   const navRoot = document.querySelector('.nav');
@@ -77,6 +91,44 @@
       <a class="dropdown-item" href="about_evods.html"><div class="di-label">About EVODS</div><div class="di-sub">Our EV energy and fleet mission</div></a><div class="dropdown-divider"></div>
       <a class="dropdown-item" href="blog.html"><div class="di-label">Insights by EVODS</div><div class="di-sub">Knowledge Centre</div></a></div></div>
     <div class="nav-item has-dropdown"><a>Connect</a><div class="dropdown"><a class="dropdown-item" href="valet_contact.html"><div class="di-label">Contact us</div><div class="di-sub">Reach our team directly</div></a></div></div>`;
+
+  const mobileToggle = document.createElement('button');
+  mobileToggle.type = 'button';
+  mobileToggle.className = 'nav-mobile-toggle';
+  mobileToggle.setAttribute('aria-label', 'Open navigation menu');
+  mobileToggle.setAttribute('aria-expanded', 'false');
+  mobileToggle.innerHTML = '<span>☰</span>';
+  navRoot.appendChild(mobileToggle);
+
+  const closeMobileMenu = () => {
+    navRoot.classList.remove('nav-open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.setAttribute('aria-label', 'Open navigation menu');
+    nav.querySelectorAll('.nav-item.is-open').forEach((item) => item.classList.remove('is-open'));
+  };
+  mobileToggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = navRoot.classList.toggle('nav-open');
+    mobileToggle.setAttribute('aria-expanded', String(isOpen));
+    mobileToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+  });
+  nav.addEventListener('click', (event) => {
+    if (!window.matchMedia('(max-width: 760px)').matches) return;
+    const trigger = event.target.closest('.nav-item.has-dropdown > a');
+    if (!trigger) return;
+    event.preventDefault();
+    const item = trigger.closest('.nav-item');
+    nav.querySelectorAll('.nav-item.is-open').forEach((openItem) => {
+      if (openItem !== item) openItem.classList.remove('is-open');
+    });
+    item.classList.toggle('is-open');
+  });
+  document.addEventListener('click', (event) => {
+    if (window.matchMedia('(max-width: 760px)').matches && !navRoot.contains(event.target)) closeMobileMenu();
+  });
+  window.addEventListener('resize', () => {
+    if (!window.matchMedia('(max-width: 760px)').matches) closeMobileMenu();
+  });
 
   const footerMarkup = `
     <div class="site-footer-grid">
