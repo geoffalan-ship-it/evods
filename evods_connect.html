@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Connect with EVODS</title>
   <style>
-    :root{--green:#4BA114;--paper:#f3f1ec;--ink:#101313;--form:#55595a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}.nav{height:56px;background:#000;padding:0 6vw;display:flex;align-items:center}.nav img{width:126px;filter:brightness(0) invert(1)}main{max-width:1120px;margin:auto;padding:88px 7vw}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#55705e}h1{font-size:clamp(3rem,6vw,6.5rem);letter-spacing:-.07em;line-height:.9;font-weight:500;margin:18px 0}.form{margin-top:46px;max-width:700px;background:var(--form);color:#fff;padding:30px;border:1px solid rgba(0,0,0,.22)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:11px;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;color:#fff}input,textarea{width:100%;border:1px solid #a6aaab;background:#fff;color:#101313;padding:12px;font:15px Arial}input{height:46px}textarea{min-height:130px;resize:vertical}button{margin-top:25px;border:0;background:var(--green);color:#071006;padding:15px 20px;font-weight:bold;cursor:pointer}.success{max-width:700px;padding:23px;background:#dfeeda;color:#25402a;margin-top:46px;font-size:17px}@media(max-width:620px){main{padding:62px 7vw}.grid{grid-template-columns:1fr}}</style>
+    :root{--green:#4BA114;--canvas:#101010;--panel:#151515;--field:#292929;--line:#202020;--label:#b5b5b7;--white:#f6f6f6}*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--white);font-family:Arial,sans-serif}.nav{height:72px;background:#0b0b0b;padding:0 6vw;display:flex;align-items:center;border-bottom:1px solid #1d1d1d}.nav img{width:126px;filter:brightness(0) invert(1)}main{max-width:1660px;margin:auto;padding:72px 6vw 112px}h1{font-size:clamp(2.7rem,5vw,5.2rem);letter-spacing:-.065em;line-height:.95;font-weight:500;margin:0 0 52px}.form{position:relative;background:var(--panel);padding:62px 64px;box-shadow:0 18px 45px rgba(0,0,0,.22);border:1px solid #202020}.grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 32px}.field{display:flex;flex-direction:column;gap:15px}.field.full{grid-column:1/-1}label{font-size:17px;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:var(--label)}input,textarea{width:100%;border:1px solid transparent;border-radius:999px;background:var(--field);color:var(--white);padding:0 34px;font:500 18px Arial;outline:none;transition:border-color .2s,background .2s}input{height:96px}textarea{height:216px;border-radius:34px;padding:29px 34px;line-height:1.5;resize:vertical}input::placeholder,textarea::placeholder{color:#858587}input:focus,textarea:focus{border-color:var(--green);background:#303030}.submit{position:absolute;right:-28px;bottom:148px;width:96px;height:96px;border:0;border-radius:50%;background:var(--green);color:#fff;font-size:34px;line-height:1;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s,background .2s}.submit:hover{background:#57b51a;transform:translateY(-2px)}.success{max-width:900px;padding:30px;background:#20301a;border:1px solid #4BA114;color:#fff;font-size:18px}@media(max-width:760px){main{padding:52px 5vw 76px}h1{margin-bottom:36px}.form{padding:38px 28px}.grid{grid-template-columns:1fr;gap:26px}.field.full{grid-column:auto}label{font-size:13px}input{height:70px;font-size:17px}textarea{height:180px}.submit{position:static;width:100%;height:64px;border-radius:999px;font-size:16px;font-weight:bold;letter-spacing:.08em;margin-top:32px}.submit::after{content:'Connect with EVODS';}.submit span{display:none}}</style>
   <link rel="stylesheet" href="/alternate-site.css?v=6">
 </head>
 <body>
@@ -14,12 +14,12 @@
     <h1>Connect with EVODS.</h1>
     <form class="form">
       <div class="grid">
-        <div class="field"><label for="name">Name *</label><input id="name" name="name" required></div>
-        <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
-        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel"></div>
-        <div class="field full"><label for="message">Message</label><textarea id="message" name="message"></textarea></div>
+        <div class="field"><label for="name">Name *</label><input id="name" name="name" placeholder="Your name" required></div>
+        <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+        <div class="field full"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="206-555-0100"></div>
+        <div class="field full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us what you want to discuss."></textarea></div>
       </div>
-      <button type="submit">Connect with EVODS</button>
+      <button class="submit" type="submit" aria-label="Connect with EVODS" title="Connect with EVODS"><span>→</span></button>
     </form>
     <div class="success" hidden>Thank you. Your message has been received. Our team will be in touch.</div>
   </main>
