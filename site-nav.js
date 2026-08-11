@@ -32,6 +32,12 @@
     main > .hero .hero-content,main > .hero .hero-copy{max-width:860px!important;position:relative!important;z-index:1!important}
     main > .hero .button,main > .hero .cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:58px!important;margin-top:40px!important;padding:0 27px!important;border-radius:999px!important;font:700 13px/1 Arial,sans-serif!important;letter-spacing:.1em!important;text-transform:uppercase!important}
     main > .hero h1 em{font-style:normal!important;color:#4BA114!important}
+    /* The blog uses a light editorial hero instead of the shared photo-hero treatment. */
+    body:has(.articles) main > .hero{min-height:auto!important;background:#f3f1ec!important;color:#101313!important}
+    body:has(.articles) main > .hero:after{display:none!important}
+    body:has(.articles) main > .hero h1{color:#101313!important;font-weight:500!important}
+    body:has(.articles) main > .hero h1 em{color:#4BA114!important}
+    body:has(.articles) main > .hero p{color:#263029!important}
     main > .hero .properties-line{white-space:normal!important}
     @media(min-width:851px){main > .hero .hero-copy:has(.properties-line){max-width:1100px!important}main > .hero .properties-line{white-space:nowrap!important}}
     @media(max-width:850px){main > .hero{min-height:680px!important}}
