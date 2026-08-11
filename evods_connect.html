@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connect with EVODS</title>
+  <style>
+    :root{--green:#4BA114;--paper:#f3f1ec;--ink:#101313;--form:#55595a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}.nav{height:56px;background:#000;padding:0 6vw;display:flex;align-items:center}.nav img{width:126px;filter:brightness(0) invert(1)}main{max-width:1120px;margin:auto;padding:88px 7vw}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#55705e}h1{font-size:clamp(3rem,6vw,6.5rem);letter-spacing:-.07em;line-height:.9;font-weight:500;margin:18px 0}.form{margin-top:46px;max-width:700px;background:var(--form);color:#fff;padding:30px;border:1px solid rgba(0,0,0,.22)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:11px;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;color:#fff}input,textarea{width:100%;border:1px solid #a6aaab;background:#fff;color:#101313;padding:12px;font:15px Arial}input{height:46px}textarea{min-height:130px;resize:vertical}button{margin-top:25px;border:0;background:var(--green);color:#071006;padding:15px 20px;font-weight:bold;cursor:pointer}.success{max-width:700px;padding:23px;background:#dfeeda;color:#25402a;margin-top:46px;font-size:17px}@media(max-width:620px){main{padding:62px 7vw}.grid{grid-template-columns:1fr}}</style>
+  <link rel="stylesheet" href="/alternate-site.css?v=6">
+</head>
+<body>
+  <nav class="nav"><a href="index.html"><img src="/assets/logo.svg" alt="EVODS"></a></nav>
+  <main>
+    <h1>Connect with EVODS.</h1>
+    <form class="form">
+      <div class="grid">
+        <div class="field"><label for="name">Name *</label><input id="name" name="name" required></div>
+        <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel"></div>
+        <div class="field full"><label for="message">Message</label><textarea id="message" name="message"></textarea></div>
+      </div>
+      <button type="submit">Connect with EVODS</button>
+    </form>
+    <div class="success" hidden>Thank you. Your message has been received. Our team will be in touch.</div>
+  </main>
+  <script>document.querySelector('form').addEventListener('submit',function(event){event.preventDefault();this.hidden=true;document.querySelector('.success').hidden=false;});</script>
+  <script src="/site-nav.js?v=4"></script>
+</body>
+</html>
