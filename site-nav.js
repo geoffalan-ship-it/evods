@@ -33,7 +33,7 @@
     main > .hero .button,main > .hero .cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:58px!important;margin-top:40px!important;padding:0 27px!important;border-radius:999px!important;font:700 13px/1 Arial,sans-serif!important;letter-spacing:.1em!important;text-transform:uppercase!important}
     main > .hero h1 em{font-style:normal!important;color:#4BA114!important}
     /* The blog uses a light editorial hero instead of the shared photo-hero treatment. */
-    body:has(.articles) main > .hero{min-height:auto!important;background:#f3f1ec!important;color:#101313!important}
+    body:has(.articles) main > .hero{min-height:auto!important;background:#fff!important;color:#101313!important}
     body:has(.articles) main > .hero:after{display:none!important}
     body:has(.articles) main > .hero h1{color:#101313!important;font-weight:500!important}
     body:has(.articles) main > .hero h1 em{color:#4BA114!important}
@@ -75,7 +75,7 @@
       <a class="dropdown-item" href="evods_properties.html"><div class="di-label">EVODS for Properties</div><div class="di-sub">Bring high-speed charging to your site</div></a></div></div>
     <div class="nav-item has-dropdown"><a>About</a><div class="dropdown">
       <a class="dropdown-item" href="about_evods.html"><div class="di-label">About EVODS</div><div class="di-sub">Our EV energy and fleet mission</div></a><div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="blog.html"><div class="di-label">Blog</div><div class="di-sub">Insights from EVODS</div></a></div></div>
+      <a class="dropdown-item" href="blog.html"><div class="di-label">Insights by EVODS</div><div class="di-sub">Knowledge Centre</div></a></div></div>
     <div class="nav-item has-dropdown"><a>Connect</a><div class="dropdown"><a class="dropdown-item" href="valet_contact.html"><div class="di-label">Contact us</div><div class="di-sub">Reach our team directly</div></a></div></div>`;
 
   const footerMarkup = `
@@ -102,7 +102,7 @@
         <a href="evods_valet.html">EVODS Valet</a>
         <a href="efmc.html"><span class="evfmc-ev">EV</span>FMC</a>
         <a href="about_evods.html">About EVODS</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Insights by EVODS</a>
         <a href="valet_contact.html">Contact us</a>
       </div>
     </div>
