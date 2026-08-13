@@ -60,8 +60,14 @@
     }
   `;
   document.head.appendChild(sharedStyle);
-  const navRoot = document.querySelector('.nav');
-  if (!navRoot) return;
+  let navRoot = document.querySelector('.nav');
+  if (!navRoot) {
+    navRoot = document.createElement('nav');
+    navRoot.className = 'nav';
+    navRoot.innerHTML = '<a class="nav-logo" href="index.html" aria-label="EVODS home"><img src="/assets/logo.svg" alt="EVODS"></a>';
+    const siteRoot = document.querySelector('.site') || document.body;
+    siteRoot.insertBefore(navRoot, siteRoot.firstChild);
+  }
   const logo = navRoot.querySelector('.nav-logo') || navRoot.querySelector('a');
   if (logo) {
     logo.classList.add('nav-logo');
@@ -144,9 +150,11 @@
       <div class="site-footer-col">
         <h5>Fleet solutions</h5>
         <a href="ev_fleet_solutions.html">CaaS</a>
+        <a href="caas_franchise.html">CaaS Franchise Opportunity</a>
         <a href="faas.html">FaaS</a>
         <a href="airport_shuttle_service.html">Airport Shuttle Service</a>
         <a href="dsp_fleet_solutions.html">DSP Fleet Solutions</a>
+        <a href="first_responder_security_fleets.html">First Responder &amp; Security Fleets</a>
         <a href="ev_rentals.html">EV Rentals</a>
       </div>
       <div class="site-footer-col">
