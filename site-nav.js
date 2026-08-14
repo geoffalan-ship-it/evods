@@ -43,10 +43,10 @@
     @media(max-width:850px){main > .hero{min-height:680px!important}}
     @media(max-width:510px){main > .hero h1,main > .hero h1 *,main > .hero h1.home-headline{font-size:3rem!important;line-height:1!important}main > .hero p,main > .hero .hero-sub{font-size:1.08rem!important;line-height:1.5!important}main > .hero .button,main > .hero .cta{margin-top:30px!important;min-height:54px!important}}
     @media(max-width:900px){.site-footer-grid{grid-template-columns:1fr 1fr!important;gap:30px 22px!important}.site-footer-brand{grid-column:1/-1!important}}
-    /* On desktop, the logo finishes just before the hero-copy boundary. */
+    /* Keep the brand anchored in the upper-left corner, independent of hero copy. */
     @media(min-width:901px){
-      .nav>.nav-logo{position:absolute!important;left:clamp(24px,8vw,140px)!important;transform:translateX(calc(-100% - 12px))!important;padding:0 10px!important}
-      .nav>.nav-logo img,.nav>.nav-logo .evods-logo{width:100px!important}
+      .nav>.nav-logo{position:absolute!important;left:16px!important;transform:none!important;padding:0 10px!important}
+      .nav>.nav-logo img,.nav>.nav-logo .evods-logo{width:124px!important}
     }
     /* Mobile navigation: a compact, tap-friendly menu rather than a clipped scrolling bar. */
     .nav-mobile-toggle{display:none!important}
