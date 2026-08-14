@@ -43,12 +43,14 @@
     @media(max-width:850px){main > .hero{min-height:680px!important}}
     @media(max-width:510px){main > .hero h1,main > .hero h1 *,main > .hero h1.home-headline{font-size:3rem!important;line-height:1!important}main > .hero p,main > .hero .hero-sub{font-size:1.08rem!important;line-height:1.5!important}main > .hero .button,main > .hero .cta{margin-top:30px!important;min-height:54px!important}}
     @media(max-width:900px){.site-footer-grid{grid-template-columns:1fr 1fr!important;gap:30px 22px!important}.site-footer-brand{grid-column:1/-1!important}}
+    /* Align the visible EVODS lettering with the hero-copy gutter. */
+    .nav>.nav-logo{transform:translateX(-14px)!important}
     /* Mobile navigation: a compact, tap-friendly menu rather than a clipped scrolling bar. */
     .nav-mobile-toggle{display:none!important}
     @media(max-width:900px){
       html,body{max-width:100%!important;overflow-x:hidden!important}.site{overflow:visible!important}
       .nav{position:absolute!important;top:0!important;left:0!important;right:0!important;height:64px!important;min-height:64px!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;padding:8px 24px!important;gap:10px!important;overflow:visible!important}
-      .nav>.nav-logo{position:static!important;transform:none!important;height:40px!important;padding:0 11px!important}.nav>.nav-logo img{width:94px!important}.nav>.nav-logo .evods-logo{width:94px!important;height:auto!important}
+      .nav>.nav-logo{position:static!important;transform:translateX(-11px)!important;height:40px!important;padding:0 11px!important}.nav>.nav-logo img{width:94px!important}.nav>.nav-logo .evods-logo{width:94px!important;height:auto!important}
       .nav-mobile-toggle{display:inline-flex!important;width:42px!important;height:42px!important;align-items:center!important;justify-content:center!important;border:1px solid rgba(255,255,255,.22)!important;border-radius:999px!important;background:rgba(17,17,17,.68)!important;color:#fff!important;font-size:21px!important;line-height:1!important;cursor:pointer!important;backdrop-filter:blur(12px)!important}
       .nav-mobile-toggle span{display:block!important;transform:translateY(-1px)!important}.nav-mobile-toggle[aria-expanded="true"] span{font-size:0!important}.nav-mobile-toggle[aria-expanded="true"] span::before{content:"×"!important;font-size:25px!important}
       .nav-links{display:none!important;position:absolute!important;top:calc(100% + 8px)!important;left:12px!important;right:12px!important;transform:none!important;width:auto!important;height:auto!important;min-height:0!important;max-height:calc(100svh - 82px)!important;overflow-y:auto!important;padding:8px!important;border-radius:18px!important;background:rgba(18,18,18,.98)!important;border:1px solid rgba(255,255,255,.16)!important;box-shadow:0 22px 60px rgba(0,0,0,.45)!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:2px!important}
