@@ -27,3 +27,39 @@ footer{background:#232323!important;border-top:1px solid rgba(255,255,255,.15)!i
   .booking-row{grid-template-columns:1fr!important}.posts{grid-template-columns:1fr!important}.data-table{display:block!important;max-width:100%!important;overflow-x:auto!important}
   .form{padding:30px 20px!important}.grid{grid-template-columns:1fr!important}.field.full{grid-column:auto!important}
 }
+
+/* EVODS shared design system — consistent scale, rhythm, controls, and responsive behavior. */
+:root{--evods-content:1180px;--evods-gutter:clamp(24px,6vw,96px);--evods-radius:14px;--evods-shadow:0 18px 48px rgba(0,0,0,.14)}
+body{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;line-height:1.6!important;-webkit-font-smoothing:antialiased}
+main{width:100%;min-width:0}.site{width:min(100%,1760px)!important;margin-inline:auto!important}
+body:has(form.form) main{width:min(100%,1180px)!important;margin-inline:auto!important}
+main>section:not(.hero),.section,.articles,.posts{padding-left:var(--evods-gutter)!important;padding-right:var(--evods-gutter)!important}
+.section h2,.intro h2,.outcomes h2,.dark h2{max-width:1050px;font-size:clamp(2.35rem,5vw,5.35rem)!important;line-height:.96!important;letter-spacing:-.055em!important;font-weight:750!important}
+.section-title{font-size:clamp(2rem,3.8vw,4rem)!important;line-height:1!important;letter-spacing:-.045em!important;font-weight:700!important}
+.section-sub,.lead{font-size:clamp(1rem,1.5vw,1.2rem)!important;line-height:1.7!important;max-width:780px!important}
+h3{line-height:1.12}.eyebrow,.section-label,.hero-tag,.kicker{font-size:11px!important;font-weight:750!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+.button,.btn,.btn-primary,.btn-secondary,.article-cta,.response-fleet-link,.franchise-hero-link{min-height:52px!important;padding:0 22px!important;border-radius:8px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;font-size:12px!important;font-weight:800!important;line-height:1.2!important;text-align:center!important}
+.card,.tile,.feature,.post,.blog-card,.service-card,.outcome,.delivery-card,.capability,.faas-panel,.support-card,.fit-panel,.economics,.cf-item,.ask-box,.caas-cta-box{border-radius:var(--evods-radius)!important;box-shadow:var(--evods-shadow)!important}
+img{max-width:100%;height:auto}.article-body{max-width:820px!important}.article-body p{line-height:1.75!important}.article{border-radius:var(--evods-radius)!important;overflow:hidden}
+.data-table{max-width:100%}.footer,.site-footer{width:100%}
+@media(max-width:900px){
+  :root{--evods-gutter:clamp(22px,5vw,42px)}
+  main>section:not(.hero),.section,.articles,.posts{padding-left:var(--evods-gutter)!important;padding-right:var(--evods-gutter)!important}
+  .hero{min-height:min(680px,100svh)!important;padding:110px var(--evods-gutter) 58px!important}
+  .hero h1,.hero h1.home-headline{font-size:clamp(2.45rem,8.5vw,4.5rem)!important;line-height:.98!important;max-width:760px!important}
+  .hero p,.hero-sub{font-size:clamp(1rem,2.5vw,1.2rem)!important}
+  .caas-inner,.delivery-grid,.operations-grid,.mission-grid,.faas-grid,.model-grid,.fit-grid,.footer-grid{grid-template-columns:1fr!important}
+}
+@media(max-width:600px){
+  :root{--evods-gutter:22px}
+  .hero{min-height:620px!important;padding-top:102px!important;padding-bottom:44px!important;align-items:flex-end!important}
+  .hero h1,.hero h1.home-headline{font-size:clamp(2.25rem,11vw,3.15rem)!important;letter-spacing:-.05em!important}
+  .section,.intro,.outcomes,.dark,.articles,.posts{padding-top:64px!important;padding-bottom:64px!important}
+  .section h2,.intro h2,.outcomes h2,.dark h2{font-size:clamp(2.15rem,10vw,3.35rem)!important}
+  .button,.btn,.btn-primary,.btn-secondary,.article-cta,.response-fleet-link,.franchise-hero-link{width:100%!important;max-width:100%!important;white-space:normal!important}
+  .actions,.hero-actions{width:100%!important;display:grid!important;grid-template-columns:1fr!important}
+  .post,.article,.delivery-card,.capability,.faas-panel,.support-card,.fit-panel,.economics,.cf-item,.ask-box,.caas-cta-box{padding:24px!important}
+  .article-header h2{font-size:clamp(2.15rem,10vw,3.2rem)!important}
+  .article-feature{min-height:360px!important;padding:26px!important}.article-feature h3{font-size:clamp(2rem,9vw,3rem)!important}
+  table{font-size:13px!important}.data-table th,.data-table td{min-width:135px;padding:11px!important}
+}

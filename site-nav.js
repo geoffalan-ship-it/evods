@@ -42,10 +42,10 @@
     @media(min-width:851px){main > .hero .hero-copy:has(.properties-line){max-width:1100px!important}main > .hero .properties-line{white-space:nowrap!important}}
     @media(max-width:850px){main > .hero{min-height:680px!important}}
     @media(max-width:510px){main > .hero h1,main > .hero h1 *,main > .hero h1.home-headline{font-size:3rem!important;line-height:1!important}main > .hero p,main > .hero .hero-sub{font-size:1.08rem!important;line-height:1.5!important}main > .hero .button,main > .hero .cta{margin-top:30px!important;min-height:54px!important}}
-    @media(max-width:760px){.site-footer-grid{grid-template-columns:1fr 1fr!important;gap:30px 22px!important}.site-footer-brand{grid-column:1/-1!important}}
+    @media(max-width:900px){.site-footer-grid{grid-template-columns:1fr 1fr!important;gap:30px 22px!important}.site-footer-brand{grid-column:1/-1!important}}
     /* Mobile navigation: a compact, tap-friendly menu rather than a clipped scrolling bar. */
     .nav-mobile-toggle{display:none!important}
-    @media(max-width:760px){
+    @media(max-width:900px){
       html,body{max-width:100%!important;overflow-x:hidden!important}.site{overflow:visible!important}
       .nav{position:absolute!important;top:0!important;left:0!important;right:0!important;height:64px!important;min-height:64px!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;padding:8px 12px!important;gap:10px!important;overflow:visible!important}
       .nav>.nav-logo{position:static!important;transform:none!important;height:40px!important;padding:0 11px!important}.nav>.nav-logo img{width:94px!important}.nav>.nav-logo .evods-logo{width:94px!important;height:auto!important}
@@ -119,7 +119,7 @@
     mobileToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
   });
   nav.addEventListener('click', (event) => {
-    if (!window.matchMedia('(max-width: 760px)').matches) return;
+    if (!window.matchMedia('(max-width: 900px)').matches) return;
     const trigger = event.target.closest('.nav-item.has-dropdown > a');
     if (!trigger) return;
     event.preventDefault();
@@ -130,10 +130,10 @@
     item.classList.toggle('is-open');
   });
   document.addEventListener('click', (event) => {
-    if (window.matchMedia('(max-width: 760px)').matches && !navRoot.contains(event.target)) closeMobileMenu();
+    if (window.matchMedia('(max-width: 900px)').matches && !navRoot.contains(event.target)) closeMobileMenu();
   });
   window.addEventListener('resize', () => {
-    if (!window.matchMedia('(max-width: 760px)').matches) closeMobileMenu();
+    if (!window.matchMedia('(max-width: 900px)').matches) closeMobileMenu();
   });
 
   const footerMarkup = `
