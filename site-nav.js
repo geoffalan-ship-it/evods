@@ -1,7 +1,7 @@
 (() => {
   const sharedStyle = document.createElement('style');
   sharedStyle.textContent = `
-    .site{position:relative!important}.nav{position:absolute!important;top:0!important;left:0!important;right:0!important;z-index:1000!important;height:64px!important;background:transparent!important;border:0!important;padding:8px clamp(12px,2vw,24px)!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;backdrop-filter:none!important}
+    .site{position:relative!important}.nav{position:absolute!important;top:0!important;left:0!important;right:0!important;z-index:1000!important;height:64px!important;background:transparent!important;border:0!important;padding:8px clamp(24px,8vw,140px)!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;backdrop-filter:none!important}
     .nav>.nav-logo{height:44px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:0 14px!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:999px!important;background:rgba(17,17,17,.42)!important;box-shadow:0 14px 26px -22px rgba(0,0,0,.9)!important;backdrop-filter:blur(14px) saturate(108%)!important;color:#fff!important;flex:0 0 auto!important}
     .nav>.nav-logo .evods-logo{width:124px!important;height:18px!important;display:block!important}
     .nav>.nav-logo img{width:124px!important;height:auto!important;display:block!important;filter:brightness(0) invert(1)!important}
@@ -47,7 +47,7 @@
     .nav-mobile-toggle{display:none!important}
     @media(max-width:900px){
       html,body{max-width:100%!important;overflow-x:hidden!important}.site{overflow:visible!important}
-      .nav{position:absolute!important;top:0!important;left:0!important;right:0!important;height:64px!important;min-height:64px!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;padding:8px 12px!important;gap:10px!important;overflow:visible!important}
+      .nav{position:absolute!important;top:0!important;left:0!important;right:0!important;height:64px!important;min-height:64px!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;padding:8px 24px!important;gap:10px!important;overflow:visible!important}
       .nav>.nav-logo{position:static!important;transform:none!important;height:40px!important;padding:0 11px!important}.nav>.nav-logo img{width:94px!important}.nav>.nav-logo .evods-logo{width:94px!important;height:auto!important}
       .nav-mobile-toggle{display:inline-flex!important;width:42px!important;height:42px!important;align-items:center!important;justify-content:center!important;border:1px solid rgba(255,255,255,.22)!important;border-radius:999px!important;background:rgba(17,17,17,.68)!important;color:#fff!important;font-size:21px!important;line-height:1!important;cursor:pointer!important;backdrop-filter:blur(12px)!important}
       .nav-mobile-toggle span{display:block!important;transform:translateY(-1px)!important}.nav-mobile-toggle[aria-expanded="true"] span{font-size:0!important}.nav-mobile-toggle[aria-expanded="true"] span::before{content:"×"!important;font-size:25px!important}
